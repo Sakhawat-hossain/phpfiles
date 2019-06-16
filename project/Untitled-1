@@ -1,0 +1,37 @@
+1. What is the problem?
+A LSM tree is optimized for updates through its Level 0 in-memory buffer. When this buffer is filled, it is flushed to secondary storage (called a run). To speed up point queries, every run has a bloom filter. The allocation of memory to the bloom filter reduces the memory available to the buffer. Also, memory available to filters needs to be allocated from one filter to another.
+
+2. Why is it important?
+Modern key-value stores that persist the data to disk often use a Log-Structured-Merge-tree (LSM-tree). The LSM tree works by buffering updates in memory and then writing the sorted data to disk when the buffer fills. To speed up point look-ups, a Bloom filter in main memory allows a run to be skipped if it does not contain the desired key.
+
+3. Why is it hard?
+The relationship between different design parameters is non-linear. After all, the design optimization is done along a pareto curve. The design space is incredibly complex and it is hard to predict performance given a design change. Design parameters are both continuous and discreet with linear and non-linear effects.
+
+4. Why existing solutions do not work?
+Modern key-value stores improperly balance the merge policy, buffer size, and Bloom filters’ false positive rates. Simply put, existing systems are not tuned along the optimal Pareto curve (the curve beyond which lookup cost cannot be improved without harming update cost, and vice versa). The main issue with this tuning is in the false positive rate assigned to the Bloom filter (the rate is based on the number of bits-per-element). Existing solutions set this rate as a constant for all filters, which does not achieve the minimum for the LSM tree as a whole - as larger runs need proportionately larger bloom filters.
+
+5. What is the core intuition for the solution?
+Unlike other state-of-the-art key-value stores that set a fixed bits-per-element to all Bloom filters, Monkey allocates memory to filters across different levels - such that the sum of the errors is minimized. With a Bloom filter, worst-case lookup cost is proportional to the sum of the false positive rates - but increasing its size with larger runs does not improve I/O performance. As main memory can be used for both buffering and bloom filters, it makes sense to balance the budget to minimize both lookup cost and Bloom filter false positive rate.
+
+6. Does the paper prove its claims?
+The authors show analytically that Bloom filter tuning shifts the asymptotic complexity of lookup cost. Worst-case performance parameters are identified and used to maximize performance of a random workload of lookups and updates. These parameters are used to model the design such that sensitivity of performance can be understood with respect to ratio of reads to writes, number of data entries, size of data entries, and speed of persistent media.
+
+7. What is the setup of analysis/experiments? is it sufficient?
+For experimentation the authors used a 2.7GHz 4 core 32GB DDR4 machine with 500GB 7200RPM disk. Each core has 8MB L3 cache. The authors compare Monkey to LevelDB (added Monkey on top of LevelDB).	The database was initially empty and 1GB of 1KB key value pairs were added. Monkey demonstrates a reduction of latency by 50% reasonably - scaling better with increased data maintaining stable latency. Monkey is shown to improve performance while varying each of the system parameters (note: not design parameters), which shows the pareto plot actually moved!
+
+8. Are there any gaps in the logic/proof?
+Some design parameters seem to be a function of each other. For example, M_buffer, M_filter, and M_pointers can be calculated from each other given main-memory availability. Monkey can co-tune these to favor one performance metric over another if needed by the application. The derived equations should rearrange to show the optimizations based on system parameters and fewer design parameters.
+
+9. Describe at least one possible next step.
+A next step would be to analyze performance using large values to which the LSM tree points. Also, this structure should be looked at on a distributed system (it would have to use references most likely). This adds additional parameters into the model and will most likely move the pareto curve.
+
+BibTex Citation
+@inproceedings{dayan2017monkey,
+  title={Monkey: Optimal navigable key-value store},
+  author={Dayan, Niv and Athanassoulis, Manos and Idreos, Stratos},
+  booktitle={Proceedings of the 2017 ACM International Conference on Management of Data},
+  pages={79--94},
+  year={2017},
+  organization={ACM}
+}
+Looking for a job?

@@ -1,0 +1,104 @@
+#adminpage-container{
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    position: relative;
+    background-image: url(../img/image-2.jpg);
+    background-size: cover;
+	background-position: center;
+}
+h1{
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 37%;
+}
+h2{
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 42%;
+}
+#inputdesign{
+    width: 70px;
+    height: 35px;
+    position: absolute;
+    top: 8%;
+    right: 5%;
+    text-align: center;
+    font-size: 20px;
+}
+#login-form-box{
+    height: auto;
+    width: auto;
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+}
+#login-form-box-input{
+    height: 35px;
+    width: 170px;
+    text-align: center;
+    font-size: 20px;
+}
+#inputdesign-2{
+    width: 70px;
+    height: 35px;
+    text-align: center;
+    font-size: 20px;
+}
+#errordesign{
+    font-size: 25px;
+    color: red;
+    padding-top: 5px;
+}
+#usernamebox{
+    position: absolute;
+    width: 250px;
+    height: 30px;
+    overflow: none;
+    display: flex;
+    top: 5%;
+    right: 15%;
+}
+#usernamebox p{
+    height: 100%;
+    width: 130px;
+    text-align: center;
+}
+#usernamebox button{
+    height: 100%;
+    width: 119px;
+    border: none;
+    overflow: hidden;
+}
+#logoutbox{
+    position: absolute;
+    right: 4%;
+    top: 5%;
+    text-align: center;
+}
+#logoutbox button{
+    width: 70px;
+    height: 30px;
+}
+#different-link-box{
+    width: 220px;
+    height: auto;
+    position: absolute;
+    right: 20%;
+    top: 35%;
+    background-color: blueviolet;
+}
+#different-link-box button{
+    width: 97%;
+    height: 32px;
+    margin: 4px;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 17px;
+}
+#different-link-box button:hover{
+    background-color: dimgrey;
+}
