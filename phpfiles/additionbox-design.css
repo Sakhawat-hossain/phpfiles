@@ -1,0 +1,42 @@
+#additionbox-of-manufacturers{
+    height: auto;
+    width: 450px;
+    position: relative;
+    margin-left: 25%;
+    top: 60px;
+    padding-left: 20px;
+    padding-top: 10px;
+    background-color: burlywood;
+}
+#additionbox-of-manufacturers input{
+    height: 22px;
+    width: 200px;
+    position: absolute;
+    right: 50px;
+    text-align: center;
+}
+#additionbox-of-manufacturers span{
+    height: 15px;
+    position: relative;
+    left: 200px;
+}
+#additionbox-of-manufacturers button{
+    height: 30px;
+    width: 60px;
+    position: absolute;
+    right: 50px;
+    overflow: hidden;
+    bottom: 5px;
+}
+#additionbox-of-manufacturers p{
+    position: absolute;
+    left: 20px;
+    bottom: 5px;
+}
+#selectbox-of-employee{
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    right: 140px;
+    bottom: 5px;
+}

@@ -1,0 +1,141 @@
+#add-new-purchases-container{
+    width: 90%;
+    min-height: 90%;
+    left: 5%;
+    top: 5%;
+    position: relative;
+    background-color: blue;
+}
+#product-namebox{
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+}
+#product-namebox input{
+    height: 28px;
+    width: 200px;
+    text-align: center;
+}
+#product-namebox button{
+    height: 30px;
+    width: 60px;
+}
+#search-product-to-purchase{
+    height: auto;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+}
+#search-product-to-purchase button{
+    height: 30px;
+    width: 300px;
+}
+            #purchase-table-container{
+                width: 70%;
+                display: inline-block;
+                position: relative;
+                margin-left: 15%;
+                margin-top: 100px;
+                border-bottom: 1px white solid;
+            }
+#purchase-table-container-mgs{
+    width: 89.7%;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10%;
+    border-right: 1px white solid;
+    border-left: 1px white solid;
+    background-color: burlywood;
+}
+            #dataTable{
+                border-collapse: collapse;
+                width: 100%;
+                position:relative;
+            }
+            #dataTable td,#dataTable th{
+                border: 1px solid #ddd;
+                padding: 10px;
+            }
+            #dataTable th{
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #4CAF50;
+                color: white;               
+            }
+            #dataTable tr:nth-child(odd) {
+                
+                background-color: bisque;   
+            }
+            #dataTable tr:nth-child(even) {
+                
+                background-color: darkgrey;   
+            }
+            #messagebox-of-purchase{
+                width: 100%;
+                height: 160px;
+                position: relative;
+                background-color: bisque;
+                text-align: center;
+                padding-top: 80px;
+            }
+            #messagebox-of-purchase button{
+                width: auto;
+                height: 30px;
+                position: absolute;
+                right: 10%;
+                bottom: 20%;
+            }
+#additionbox-of-purchases{
+    height: auto;
+    width: 450px;
+    position: relative;
+    margin-left: 25%;
+    top: 80px;
+    padding-left: 20px;
+    padding-top: 10px;
+    background-color: burlywood;
+}
+#additionbox-of-purchases input{
+    height: 22px;
+    width: 200px;
+    position: absolute;
+    right: 50px;
+    text-align: center;
+}
+#additionbox-of-purchases span{
+    height: 15px;
+    position: relative;
+    left: 200px;
+}
+#additionbox-of-purchases button{
+    height: 30px;
+    width: 60px;
+    position: absolute;
+    right: 50px;
+    overflow: hidden;
+    bottom: 5px;
+}
+#additionbox-of-purchases p{
+    position: relative;
+    left: 10px;
+    bottom: 10px;
+}
+#selectbox-of-employee{
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    right: 140px;
+    bottom: 5px;
+}
+#messagebox{
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 2%;
+    top: 15%;
+}

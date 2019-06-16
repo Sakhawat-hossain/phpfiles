@@ -1,0 +1,113 @@
+#add-new-products-container{
+    width: 90%;
+    height: 94%;
+    left: 5%;
+    top: 2%;
+    position: relative;
+    background-color: blue;
+}
+#usernamebox{
+    position: absolute;
+    width: 250px;
+    height: 30px;
+    overflow: none;
+    display: flex;
+    top: 5%;
+    right: 12%;
+}
+#usernamebox p{
+    height: 100%;
+    width: 130px;
+    text-align: center;
+}
+#usernamebox button{
+    height: 100%;
+    width: 119px;
+    border: none;
+    overflow: hidden;
+}
+#logoutbox{
+    position: absolute;
+    right: 3%;
+    top: 5%;
+    text-align: center;
+}
+#logoutbox button{
+    width: 70px;
+    height: 30px;
+}
+#backbox{
+    position: absolute;
+    left:  2%;
+    top: 5%;
+    text-align: center;
+}
+#backbox button{
+    width: 60px;
+    height: 30px;
+}
+h2{
+    position: absolute;
+    top: 3%;
+    left: 30%;
+}
+#messagebox{
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 2%;
+    top: 15%;
+}
+#additionbox{
+    height: auto;
+    width: 450px;
+    position: relative;
+    margin-left: 25%;
+    top: 60px;
+    padding-left: 20px;
+    padding-top: 15px;
+    background-color: burlywood;
+}
+#additionbox input{
+    height: 25px;
+    width: 200px;
+    position: absolute;
+    right: 50px;
+    text-align: center;
+}
+#additionbox span{
+    height: 20px;
+    position: relative;
+    left: 200px;
+}
+#additionbox button{
+    height: 30px;
+    width: 60px;
+    position: absolute;
+    right: 50px;
+    overflow: hidden;
+}
+.error{
+    color: red;
+}
+#add-manufacturer-mgsbox{
+    width: 50%;
+    height: 70%;
+    left: 25%;
+    top: 15%;
+    position: relative;
+    background-color: brown;
+}
+#add-manufacturer-mgsbox p{
+    position: absolute;
+    top: 30%;
+    left: 30%
+}
+#add-manufacturer-mgsbox button{
+    height: 35px;
+    width: auto;
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    text-align: center;
+}

@@ -1,0 +1,81 @@
+
+            .container{
+                width: 60%;
+                height: auto;
+                margin: 0px;
+                display: inline-block;
+                position: absolute;
+                left: 20%;
+            }
+            #dataTable{
+                border-collapse: collapse;
+                width: 100%;
+                position:relative;
+                
+            }
+            #dataTable td,#dataTable th{
+                border: 1px solid #ddd;
+                padding: 8px;
+                padding-left: 10px;
+            }
+            #dataTable tr:nth-child(even) {
+                
+                background-color: #f2f2f2;   
+            }
+            #dataTable tr:hover{
+                color: white;
+                background-color: #333;
+            }
+            #dataTable th{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                text-align: left;
+                background-color: #4CAF50;
+                color: white;               
+            }
+            #dcheckbox{
+                width: 20px;
+                height: 20px;
+                margin-left: 20px;
+            }
+            .containerbottom{
+                width: 100%;
+                min-height: 90px;
+                position: relative;
+                background-color: #808080;
+                margin-bottom: 0px;
+            }
+            #empty{
+                width: 400px;;
+                height: 300px;
+                left: 30%;
+                position: absolute;
+                background-color: bisque;
+            }
+            #empty p{
+                top: 35%;
+                position: relative;
+                text-align: center;
+            
+            }
+            .containerbottom button{
+                position: absolute;
+                top: 30px;
+                width: 60px;;
+                height: 35px;
+                right: 5%;
+                background-color: burlywood;
+            }
+.containerbottom input{
+    width: 150px;
+    height: 28px;
+    position: relative;
+    margin-left: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+#error{
+    color: red;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
